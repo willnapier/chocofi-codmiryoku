@@ -1,0 +1,14 @@
+# Copyright (c) 2020 Pete Johanson
+# SPDX-License-Identifier: MIT
+
+config SHIELD_CHOCOFI_LEFT
+    def_bool $(shields_list_contains,chocofi_left)
+    select SHIELD_CORNE_LEFT
+
+config SHIELD_CHOCOFI_RIGHT
+    def_bool $(shields_list_contains,chocofi_right)
+    select SHIELD_CORNE_RIGHT
+
+config SHIELD_CHOCOFI
+    def_bool $(shields_list_contains,chocofi)
+    select SHIELD_CORNE
